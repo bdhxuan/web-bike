@@ -5,22 +5,18 @@ const orderSchema = new mongoose.Schema({
             type: String, 
             required: true,
         },
+        ward: {
+            type: String, 
+            required: true,
+        },
+        district: {
+            type: String, 
+            required: true,
+        },
         city: {
             type: String, 
             required: true,
         },
-        // state: {
-        //     type: String, 
-        //     required: true,
-        // },
-        // country: {
-        //     type: String, 
-        //     required: true,
-        // },
-        // code: {
-        //     type: Number,
-        //     required: true,
-        // },
         phone: {
             type: Number,
             required: true,
@@ -56,24 +52,6 @@ const orderSchema = new mongoose.Schema({
             ref: "User",
             required: true,
     },
-    paymentInfo: {
-        id: {
-            type: String, 
-            required: true,
-        },
-        status: {
-            type: String, 
-            required: true,
-        }
-    },
-    paidAt: {
-        type: Date,
-        required: true,
-    },
-    // itemsPrice: {
-    //     type: Number,
-    //     default: 0
-    // },
     shippingPrice: {
         type: Number,
         default: 0
@@ -85,7 +63,7 @@ const orderSchema = new mongoose.Schema({
     orderStatus: {
         type: String,
         required: true,
-        default: "Đang tiến hành",
+        default: "Đang xử lý",
     },
     deliveryAt: Date,
     createAt: {

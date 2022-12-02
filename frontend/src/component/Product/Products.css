@@ -1,0 +1,128 @@
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 6rem 0rem 11rem;
+    justify-content: center;
+    min-height: 30%;
+    
+}
+
+.paginationBox {
+    display: flex;
+    justify-content: center;
+    margin: 6rem;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.page-item {
+    background-color: rgb(255, 255, 255);
+    list-style: none;
+    border: 1px solid rgb(179, 177, 177);
+    transition: all 0.3s;
+    cursor: pointer;
+    
+}
+
+.page-item:hover .page-link {
+    color: rgb(10, 29, 173);
+}
+
+.pageItemActive {
+   font-weight: bold;
+}
+
+.pageLinkActive {
+    color: blue;
+}
+
+.filterBox {
+    width: 13rem;
+    position: absolute;
+    top: 8rem;
+    left: 2rem;
+}
+
+.filterBox .title {
+    font-weight: bold;
+    font-size: 15px;
+    color: blue;
+    padding-left: 0%;
+}
+
+
+.categoryBox1 {
+    padding: 0%;
+}
+
+.categoryBox2 {
+    padding: 0%;
+}
+
+.categoryBox2 >li>a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+}
+
+.categoryBox2>li:first-child{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.categoryBox2>li>a:hover{
+    color: blue;
+}
+
+.category-link {
+    list-style: none;
+    color: black;
+    font-size: 15px;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.category-link:hover {
+    color: blue;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .products {
+        font-size: 5px;
+    }
+
+    .pagination {
+        font-size: 5px;
+    }
+
+    .filterBox {
+        width: 15rem;
+        position: static;
+        margin: auto;
+    }
+
+    .filterBox > p {
+        font-size: 15px;
+    }
+
+    .page-link {
+        font-size: 20px;
+    }
+
+    .category-link {
+        font-size: 10px;
+    }
+    .filterBox .title {
+        font-size: 12px;
+    }
+    .paginationBox {
+        font-size: 10px;
+    }
+}

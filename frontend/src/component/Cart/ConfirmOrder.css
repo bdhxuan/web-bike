@@ -1,0 +1,230 @@
+.confirmOrderPage {
+    height: 70vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 6fr 3fr;
+    
+    max-height: 100%;
+}
+
+.confirmOrderPage>div:last-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.247);
+}
+
+.confirmshipping{
+    padding: 5rem;
+    padding-bottom: 0%;
+}
+
+.confirmshipping > h3{
+    text-transform: uppercase;
+    color: tomato;
+    /* font-weight: bold; */
+}
+
+.orderSummary > h3{
+    text-transform: uppercase;
+    color: tomato;
+    /* font-weight: bold; */
+}
+
+.confirmshipping>p {
+    font-size: 15px;
+}
+
+.confirmshippingBox,
+.confirmCartItemsContainer {
+    margin: 2rem;
+}
+
+.confirmshippingBox>div {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.confirmshippingBox>div>p {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.confirmshippingBox>div>span {
+    margin: 0 1rem;
+    font-size: 15px;
+    color: #575757;
+}
+
+.confirmCartItems>p {
+    font-size: 15px;
+}
+
+.confirmCartItems {
+    padding: 5rem;
+    padding-top: 2rem;
+}
+
+.confirmCartItemsContainer {
+    max-height: 20rem;
+    overflow-y: auto;
+}
+
+.confirmCartItemsContainer>div {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -2%;
+}
+
+.confirmCartItemsContainer>div>img {
+    width: 6rem;
+}
+
+.confirmCartItemsContainer>div>a {
+    color: #575757;
+    margin: 0 2rem;
+    width: 60%;
+    text-decoration: none;
+}
+
+.confirmCartItemsContainer>div>span {
+    font-size: 15px;
+    color: #5e5e5e;
+}
+
+.orderSummary {
+    padding: 7rem;
+}
+
+.orderSummary>p {
+    text-align: center;
+    font-size: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+    padding: 1rem;
+    width: 100%;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.orderSummary>div>div {
+    display: flex;
+    font-size: 15px;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.orderSummary>div>div>span {
+    color: rgba(0, 0, 0, 0.692);
+}
+
+.orderSummaryTotal {
+    display: flex;
+    font-size: 20px;
+    justify-content: space-between;
+    border-top: 1px solid rgba(0, 0, 0, 0.363);
+    padding: 2vmax 0;
+}
+
+.orderSummaryTotal >span{
+    color: rgb(232, 6, 6);
+    font-weight: bold;
+}
+
+.orderSummary>button {
+    background-color: rgb(4, 97, 238);
+    color: white;
+    width: 100%;
+    padding: 0.5rem;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 17px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.orderSummary>button:hover {
+    background-color: tomato
+}
+
+@media screen and (max-width: 600px) {
+    .confirmOrderPage {
+        grid-template-columns: 1fr;
+        height: unset;
+    }
+
+    .confirmOrderPage>div:last-child {
+        border-left: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.247);
+    }
+
+    .confirmshipping>p {
+        font-size: 15px;
+    }
+
+    .confirmshippingBox>div {
+        display: flex;
+        margin: 6vw 0;
+    }
+
+    .confirmshippingBox>div>p {
+        font-size: 20px;
+    }
+
+    .confirmshippingBox>div>span {
+        font-size: 20px;
+    }
+
+    .confirmCartItems>p {
+        font-size: 20px;
+    }
+
+    .confirmCartItemsContainer {
+        max-height: 50vw;
+    }
+
+    .confirmCartItemsContainer>div {
+        font-size: 20px;
+        margin: 4vw 0;
+    }
+
+    .confirmCartItemsContainer>div>img {
+        width: 10vw;
+    }
+
+    .confirmCartItemsContainer>div>a {
+        margin: 0;
+        width: 30%;
+    }
+
+    .confirmCartItemsContainer>div>span {
+        font-size: 20px;
+    }
+
+    .orderSummary {
+        padding: 12vw;
+    }
+
+    .orderSummary>p {
+        font-size: 20px;
+        padding: 4vw;
+    }
+
+    .orderSummary>div>div {
+        font-size: 20px;
+    }
+
+    .orderSummaryTotal {
+        font-size: 20px;
+        padding: 5vw 0;
+    }
+
+    .orderSummary>button {
+        padding: 2vw;
+        margin: 4vw auto;
+        font-size: 20px;
+        border-radius: 4px;
+    }
+}

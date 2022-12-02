@@ -1,0 +1,66 @@
+.CartItemCard {
+    display: flex;
+    padding: 1rem;
+    height: 8rem;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.CartItemCard>img {
+    width: 7rem;
+}
+
+.CartItemCard>div {
+    display: flex;
+    margin: 0.3vmax 1vmax;
+    flex-direction: column;
+}
+
+.CartItemCard>div>a {
+    font-size: 15px;
+    color: blue;
+    text-decoration: none;
+}
+
+.CartItemCard>div>span {
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+
+.CartItemCard>div>p {
+    color: rgba(24, 24, 24, 0.815);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.CartItemCard>div>p:hover{
+    color: rgb(232, 6, 6);
+}
+
+@media screen and (max-width: 600px) {
+    .CartItemCard {
+        padding: 3rem;
+        height: 25rem;
+    }
+
+    .CartItemCard>img {
+        width: 5rem;
+    }
+
+    .CartItemCard>div {
+        margin: 1rem 1.5rem;
+    }
+
+    .CartItemCard>div>a {
+        font-size: 15px;
+    }
+
+    .CartItemCard>div>span {
+        font-size: 15px;
+    }
+
+    .CartItemCard>div>p {
+       font-size: 15px;
+    }
+}

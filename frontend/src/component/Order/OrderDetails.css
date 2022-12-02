@@ -1,0 +1,133 @@
+.orderDetailsPage {
+    background-color: white;
+}
+
+.orderDetailsContainer>h2 {
+    margin: 4rem 0;
+    margin-top: -2%;
+    color: tomato;
+    text-transform: uppercase;
+}
+
+.orderDetailsContainer>h3{
+    margin: 4rem 0;
+    margin-top: -2%;
+    color: rgb(4, 97, 238);
+    text-transform: uppercase;
+}
+
+.orderDetailsContainer {
+    padding: 5rem 0 0 10rem;
+    padding-bottom: 0%;
+    
+}
+
+.orderDetailsContainer>p {
+    font-size: 15px;
+}
+
+.orderDetailsContainerBox,
+.orderDetailsCartItemsContainer {
+    margin: -2rem 2rem 3rem 2rem;
+}
+
+.orderDetailsContainerBox>div {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.orderDetailsContainerBox>p{
+    font-size: 18px;
+    color: black;
+    margin: -3rem 1rem 2rem 1rem;
+}
+
+.orderDetailsContainerBox>div>p {
+    font-size: 18px;
+    color: black;
+    margin: -0.5rem 1rem;
+}
+
+.orderDetailsContainerBox>div>span {
+    margin: -0.3rem 1rem 1rem 1rem;
+    font-size: 15px;
+    color: #575757;
+}
+
+
+.orderDetailsCartItems {
+    padding: 2rem 0 0 10rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.164);
+}
+
+.orderDetailsCartItems>h3{
+    color: rgb(4, 97, 238);
+    text-transform: uppercase;
+}
+
+.orderDetailsCartItemsContainer>div {
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.orderDetailsCartItemsContainer>div>img {
+    width: 5rem;
+}
+
+.orderDetailsCartItemsContainer>div>a {
+    color: #575757;
+    margin: 0 3rem;
+    width: 60%;
+    text-decoration: none;
+}
+
+.orderDetailsCartItemsContainer>div>span {
+    font-size: 15px;
+    color: #5e5e5e;
+}
+
+@media screen and (max-width: 600px) {
+    .orderDetailsContainer{
+        padding: 4rem;
+    }
+
+    .orderDetailsContainer>p {
+        font-size: 15px;
+    }
+
+    .orderDetailsContainerBox>div {
+        margin: 6vw 0;
+    }
+
+    .orderDetailsContainerBox>div>p {
+        font-size: 17px;
+    }
+
+    .orderDetailsContainerBox>div>span {
+        font-size: 17px;
+    }
+
+    .orderDetailsCartItems>p {
+        font-size: 17px;
+    }
+
+    .orderDetailsCartItemsContainer>div {
+        font-size: 17px;
+        margin: 4vw 0;
+    }
+
+    .orderDetailsCartItemsContainer>div>img {
+        width: 10vw;
+    }
+
+    .orderDetailsCartItemsContainer>div>a {
+        margin: 2vw;
+        width: 30%;
+    }
+
+    .orderDetailsCartItemsContainer>div>span {
+        font-size: 17px;
+    }
+}

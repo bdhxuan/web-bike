@@ -6,7 +6,6 @@ const productSchema = new mongoose.Schema({
         required: [true, "Nhập tên sản phẩm"],
         trim: true,
     },
-    
     price: {
         type: Number,
         required: [true, "Nhập giá"],
@@ -15,13 +14,9 @@ const productSchema = new mongoose.Schema({
         type: String,
         required: [true, "Nhập mô tả"],
     },
-    ratings: {
-        type: Number,
-        default: 0,
-    },
     images:[
         {
-            public_id: {
+            image_id: {
                 type: String,
                 required: true,
             },
@@ -41,38 +36,12 @@ const productSchema = new mongoose.Schema({
         maxLength: [4, "Kho không được vượt quá 4 ký tự"],
         default:1,
     },
-    numofReviews: {
-        type: Number,
-        default: 0,
-    },
-    reviews: [
-        {
-            user: {
-                type: mongoose.Schema.ObjectId,
-                ref: "User",
-                required: true,
-            },
-            name: {
-                type: String,
-                required: true,
-            },
-            rating: {
-                type: Number,
-                required: true,
-            },
-            comment: {
-                type: String,
-                required: true,
-            }
-        }
-    ],
-
     user: {
         type: mongoose.Schema.ObjectId,
         ref: "User",
         required: true,
     },
-    creatAt: {
+    createAt: {
         type: Date,
         default: Date.now()
     }

@@ -8,9 +8,6 @@ exports.createOrder = catchAsyncError(async (req, res, next)=> {
     const {
         shippingInfo, 
         orderItems, 
-        paymentInfo, 
-        // itemsPrice, 
-        // taxPrice, 
         shippingPrice, 
         totalPrice,
     } = req.body;
@@ -18,13 +15,10 @@ exports.createOrder = catchAsyncError(async (req, res, next)=> {
     const order = await Order.create({
         shippingInfo, 
         orderItems, 
-        paymentInfo, 
-        // itemsPrice, 
-        // taxPrice, 
         shippingPrice, 
         totalPrice,
-        paidAt: Date.now(),
         user: req.user._id,
+        createAt: Date.now()
     });
 
     res.status(201).json({
@@ -37,7 +31,7 @@ exports.createOrder = catchAsyncError(async (req, res, next)=> {
 exports.getSingleOrder = catchAsyncError( async(req, res, next)=> {
     const order = await Order.findById(req.params.id).populate(
         "user", 
-        "name email"
+        "username email"
         );  //populate hoat dong tuong tu left join trong sql
 
     if(!order) {
@@ -53,11 +47,9 @@ exports.getSingleOrder = catchAsyncError( async(req, res, next)=> {
 //lay don hang cua toi
 exports.myOrders = catchAsyncError( async(req, res, next)=> {
     const orders = await Order.find({user: req.user._id});
-
-    // if(!order) {
-    //     return next(new ApiError(404, "Không tồn tại đơn hàng với Id này"));
-    // }
-
+    if(!order) {
+        return next(new ApiError(404, "Không tồn tại đơn hàng với Id này"));
+    }
     res.status(200).json({
         success: true,
         orders,
@@ -97,9 +89,9 @@ exports.updateOrder = catchAsyncError( async(req, res, next)=> {
     });
 
     order.orderStatus = req.body.status;
-    if(req.body.status === "Đã giao hàng"){
-        order.deliveredAt = Date.now();
-    }
+    // if(req.body.status === "Đã giao hàng"){
+    //     order.deliveredAt = Date.now();
+    // }
 
    await order.save({validateBeforeSave: false});
 

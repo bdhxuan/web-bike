@@ -7,7 +7,7 @@ const crypto = require("crypto");
 
 
 const userSchema = new mongoose.Schema({
-    name: {
+    username: {
         type: String,
         required: [true, "Nhập tên"],
         maxLength:[30, "Tên không thể vượt quá 30 ký tự!"],
@@ -23,25 +23,13 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Nhập mật khẩu"],
         minLength: [8, "Mật khẩu nên lớn hơn 8 ký tự!"],
-        select: false,
-    },
-    avatar: {
-      public_id: {
-                type: String,
-                required: true
-            },
-            url: {
-                type: String,
-                required: true
-            }
+        select: true,
     },
     role: {
         type: String,
-        default: "user",
+        default: "thành viên",
     },
 
-    resetPasswordToken: String,
-    resetPasswordExpire: Date,
 });
 
 //bam mat khau truoc khi luu
@@ -63,19 +51,5 @@ userSchema.methods.getJWTToken = function() {
 userSchema.methods.comparePassword = async function(enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
-
-//tao ma lay lai mat khau
-userSchema.methods.getResetPasswordToken = function(){
-
-    //tao ma
-    const resetToken = crypto.randomBytes(20).toString("hex");
-
-    //bam va them dat lai mat khau vao userSchema
-    this.resetPasswordToken = crypto.createHash("sha256").update(resetToken).digest("hex");
-    this.resetPasswordExpire = Date.now() + 15*60*1000; //dat tgian 15p truoc khi het han nhan ma lay lai mat khau
-
-    return resetToken;
-}
-
 
 module.exports = mongoose.model("User", userSchema);

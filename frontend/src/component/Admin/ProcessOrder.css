@@ -1,0 +1,59 @@
+
+.updateOrderForm {
+    margin: 5rem 0;
+    padding: 3rem;
+    background-color: white;
+}
+
+.updateOrderForm>div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.updateOrderForm>div>select {
+    padding: 1rem 4rem;
+    margin: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+h2 {
+    margin: 1rem 0rem 4rem 4rem;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(38, 107, 246);
+}
+
+.orderDetailsContainerBox{
+    margin-left: 6rem;
+}
+
+.confirmCartItems > h2{
+    margin-left: -1rem;
+}
+
+.createProductBtn{
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+
+@media screen and (max-width: 600px) {
+    .updateOrderForm {
+        padding: 5rem;
+    }
+
+    .updateOrderForm>div>select {
+        padding: 2.5rem 5rem;
+        font-size: 15px;
+    }
+
+    .updateOrderForm>div>svg {
+        font-size: 15px;
+    }
+}

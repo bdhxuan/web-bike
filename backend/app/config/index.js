@@ -18,6 +18,11 @@ const config = {
         smptp: process.env.SMPT_PASSWORD || "xuan061201",
         smpth: process.env.SMPT_HOST || "smtp.gmail.com",
         smptport: process.env.SMPT_PORT || "465"
+    },
+    cloud: {
+        cloud_name: process.env.CLOUDINARY_NAME || "ddqajwkuy",
+        api_key: process.env.CLOUDINARY_API_KEY || "778153499139499",
+        api_secret: process.env.CLOUDINARY_API_SECRET || "kh6VyHAOBMvzUXmCKaZpv3TF6mU",
     }
 };
 

@@ -1,0 +1,290 @@
+.ProductDetails {
+    max-width: 100%;
+    max-height: 100%;
+    /* box-sizing: border-box; */
+    display: flex;
+    background-color: white;
+}
+
+
+.ProductDetails > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 2rem;
+}
+
+.ProductDetails > div:last-child {
+    align-items: flex-start;
+}
+
+.CarouselImage {
+    width: 30rem;
+}
+
+.detail-1 > h2 {
+    color:blue;
+    font-size: 25px;
+    margin-left: -0.8rem;
+}
+
+.detail-1 > p {
+    margin-top: -2rem;
+    color:rgb(39, 38, 38);
+    font-size: 18px; 
+    font-weight: bold;
+}
+
+.detail-2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+}
+
+.detail-2-span {
+    font-size:15px;
+    color:black;
+}
+
+.detail-3 {
+    width: 70%;
+}
+
+
+.detail-3 > h1 {
+    color:red;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.detail-3-1 {
+    display: flex;
+    align-items: center;
+}
+
+.detail-3-1-1 > button {
+    border: none;
+    border: 1px solid rgba(56, 56, 56, 0.116);
+    padding: 0.6rem;
+    cursor: pointer;
+    color: black;
+    transition: all 0.5s;
+}
+
+.detail-3-1-1 > button:hover{
+    background-color: rgba(163, 161, 161, 0.616);
+}
+
+.detail-3-1-1>input {
+    border: none;
+    padding: 0.5rem;
+    width: 2rem;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.74);
+    border: 1px solid rgba(56, 56, 56, 0.116);
+}
+
+.detail-3-1 > button:last-child {
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 0.5rem 2rem;
+    margin: 2rem;
+}
+
+.detail-3 > p {
+    font-size: 15px;
+}
+
+.detail-4 {
+    font-size: 20px;
+    color: crimson;
+    font-weight: bold;
+}
+
+.detail-4 > p{
+    font-size: 15px;
+    color: black;
+    font-weight: lighter;
+}
+
+.submitReview {
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 4px;
+    padding: 0.4rem 2rem;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+.submitDialog {
+    display: flex;
+    flex-direction: column;
+}
+
+.submitDialogTextArea {
+    border: 1px solid rgba(0, 0, 0, 0.082);
+    margin: 1rem 0;
+    outline: none;
+    padding: 1rem;
+    font-size: 15px;
+}
+
+
+.reviewHeading {
+    color: #08399dbe;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+    padding: 0.5rem;
+    width: 15rem;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.reviews {
+    display: flex;
+    overflow: auto;
+}
+
+.reviewCard {
+    flex: none;
+    box-shadow: 0 0 5px black;
+    border: 1px solid rgba(56, 56, 56, 0.116);
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.reviewCard>img {
+    width: 4rem;
+}
+
+.reviewCard>p {
+    color: black;
+    font-weight: bold;
+    font-size: 15px
+}
+
+.reviewCardComment {
+    color: black;
+    font-size: 10px;
+}
+
+.noReviews {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+
+
+@media screen and (max-width: 600px) {
+    .ProductDetails {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .ProductDetails>div:last-child {
+        align-items: center;
+    }
+
+    .detail-1>h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .detail-1>p {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .detail-2 {
+        justify-content: center;
+    }
+
+    .detail-2-span {
+        font-size: 1rem;
+    }
+
+    .detail-3>h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .detail-3-1 {
+        flex-direction: column;
+    }
+
+    .detail-3-1-1 {
+        padding: 1rem 0;
+    }
+
+    .detail-3-1-1>button {
+        padding: 0.5rem;
+        width: 2rem;
+    }
+
+    .detail-3-1-1>input {
+        padding: 0.5rem;
+        width: 1.5rem;
+        color: black;
+        font-size: 0.9rem;
+    }
+
+    .detail-3-1>button:last-child {
+        
+        font-size: 0.8rem;
+        padding: 0.6rem;
+        width: 10rem;
+        margin: 1rem 0;
+    }
+
+    .detail-3>p {
+        padding: 1rem 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .detail-4 {
+        font-size: 1rem;
+    }
+
+    .detail-4>p {
+        font-size: 0.7rem;
+    }
+
+    .submitReview {
+       
+        font-size: 0.8rem;
+        padding: 0.7rem;
+        width: 10rem;
+        margin: 1rem 0;
+    }
+
+    .reviewHeading{
+        font-size: 20px;
+    }
+    
+    .reviewCard {
+        width: 200px;
+    }
+
+    .reviewCard>p {
+        font-size: 12px;
+    }
+
+    .reviewCardComment {
+        font-size: 12px;
+    }
+}

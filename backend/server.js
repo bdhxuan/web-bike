@@ -2,6 +2,7 @@ const app = require("./app");
 const config = require("./app/config");
 const Mongoose = require("./app/utils/mongoose.util");
 const dotenv = require("dotenv");
+const cloudinary = require("cloudinary");
 
 //Handling Uncaught Exception
 process.on("uncaughtException", (err)=>{
@@ -11,6 +12,13 @@ process.on("uncaughtException", (err)=>{
 });
 
 dotenv.config({path:"backend/app/config/index.js"});
+
+cloudinary.config({
+    cloud_name: config.cloud.cloud_name,
+    api_key: config.cloud.api_key,
+    api_secret: config.cloud.api_secret
+})
+
 
 async function startServer() {
     try {

@@ -14,8 +14,6 @@ class ApiFeatures {
         }
         : {};
 
-        // console.log(keyword);
-
         this.query = this.query.find({...keyword});
         return this;
     }
@@ -47,6 +45,8 @@ class ApiFeatures {
         this.query = this.query.limit(resultPerPage).skip(skip);
         return this;
     }
+
+
 };
 
 module.exports = ApiFeatures;

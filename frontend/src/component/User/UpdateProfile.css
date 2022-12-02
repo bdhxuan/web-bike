@@ -1,0 +1,104 @@
+.updateProfileContainer {
+    width: 100vw;
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -6%;
+    position: absolute;
+    background-color: white;
+}
+
+ .updateProfileBox {
+    background-color: rgb(237, 233, 233);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.updateProfileHeading {
+    text-align: center;
+    color: rgb(4, 97, 238);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 1.3rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+    width: 100%;
+    margin: auto;
+}
+
+.updateProfileForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+    justify-content: space-evenly;
+    height: 70%;
+    transition: all 0.5s;
+}
+
+.updateProfileForm>div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.updateProfileForm>div>i{
+    letter-spacing: 20px;
+    font-size: 20px;
+}
+
+.updateProfileForm>div>input {
+    padding: 0.5rem 5rem 0.5rem 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.267);
+    border-radius: 4px;
+    font-size: 15px;
+    outline: none;
+}
+
+.updateProfileBtn {
+    border: none;
+    background-color: rgb(4, 97, 238);
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s;
+    border-radius: 4px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+    margin-top: 20%;
+}
+
+.updateProfileBtn:hover {
+    background-color: rgb(179, 66, 46);
+}
+
+@media screen and (max-width: 600px) {
+    .updateProfileContainer {
+        height: 70vh;
+        margin-top: 20%;
+    }
+
+    .updateProfileBox {
+        background-color: rgb(237, 233, 233);
+        
+    }
+
+    .updateProfileForm {
+        padding: 4rem;
+    }
+
+    .updateProfileForm>div>input {
+        padding: 1rem 5rem;
+        font-size: 15px;
+    }
+
+    .updateProfileBtn {
+        font-size: 15px;
+        padding: 0.8rem;
+    }
+} 

@@ -1,0 +1,50 @@
+.orderSuccess {
+    margin: auto;
+    text-align: center;
+    padding: 10rem;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderSuccess>i {
+    font-size: 70px;
+    color: tomato;
+}
+
+.orderSuccess>p {
+    font-size: 20px;
+}
+
+.orderSuccess>a {
+    background-color: rgb(4, 97, 238);
+    color: white;
+    border: none;
+    padding: 0.8rem 3rem;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 2vmax;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 600px) {
+    .orderSuccess>a {
+        padding: 3vw 6vw;
+        font-size: 15px;
+        margin: 2rem;
+    }
+
+    .orderSuccess>i {
+        font-size: 50px;
+    }
+
+    .orderSuccess>p {
+        margin: 2rem;
+        font-size: 20px;
+    }
+}

@@ -10,7 +10,6 @@ exports.isAuthenticatedUser = catchAsyncError(async(req, res, next) => {
     if(!token){
         return next(new ApiError(401, "Vui lòng đăng nhập để truy cập!"));
     }
-
     const decodeData = jwt.verify(token, config.JWTS.secret);
 
     req.user = await User.findById(decodeData.id);
