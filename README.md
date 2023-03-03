@@ -1,4 +1,4 @@
-#Bycicle website
+#Bicycle website
 
 **Author: Xuan Bui
 
